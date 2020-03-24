@@ -3,12 +3,11 @@
 <div class="container">
 
     <div class="contacts-list">
-        <app-contact *ngFor="let contact of contacts"
-            [appHighlight]="contactsService.selectedContact?.id == contact.id"
-            [contact]="contact" (clicked)="onContactSelected($event)">
-        </app-contact>
+        <app-contact *ngFor="let contact of contacts$ | async"
+            [contact]="contact"
+        ></app-contact>
     </div>
 
-    <app-contact-detail></app-contact-detail>
+    <!-- <app-contact-detail></app-contact-detail> -->
 
 </div>

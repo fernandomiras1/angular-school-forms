@@ -19,7 +19,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

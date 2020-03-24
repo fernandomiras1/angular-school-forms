@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Contact } from '../../models/contact.model';
 import { ContactsService } from '../../services/contacts.service';
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contacts-list',
@@ -10,24 +10,16 @@ import { ContactsService } from '../../services/contacts.service';
 })
 export class ContactsListComponent implements OnInit {
   public isStickyHeader:boolean = false;
-  public contacts:Contact[] = [];
+  public contacts$:Observable<Contact[]>;
   constructor(public contactsService: ContactsService) { }
 
-  // @HostListener('window:scroll', ['$event'])
-  // private handleScroll($event:Event){
-  //   if(($event.target as HTMLElement).children[0].scrollTop > 20 && !this.isStickyHeader){
-  //     this.isStickyHeader = true;
-  //   }else if(($event.target as HTMLElement).children[0].scrollTop <= 20 && this.isStickyHeader){
-  //     this.isStickyHeader = false;
-  //   }
-  // }
-
   ngOnInit() {
-    this.contacts = this.contactsService.getContacts();
+    this.contacts$ = this.contactsService.contacts$;
+    // this.contacts = this.contactsService.getContacts();
   }
 
-  onContactSelected(id:number){
-    this.contactsService.selectContactById(id);
-  }
+  // onContactSelected(id:number){
+  //   this.contactsService.selectContactById(id);
+  // }
 
 }

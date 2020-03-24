@@ -1,0 +1,78 @@
+.form-item-image{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 16px 32px 16px;
+    img{
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 8px 16px;
+        flex-shrink: 0;
+        align-self: flex-start;
+    }
+  }
+  
+  .form-item {
+      margin: 16px;
+      width: 300px;
+      display: flex;
+      position: relative;
+  
+      label{
+          width: 80px;
+          max-width: 80px;
+          display: inline-block;
+      }
+  
+      & > * {
+          flex-grow: 1;
+      }
+  }
+  
+  .form-group{
+      margin: 16px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+  
+      .form-item{
+          margin-top: 0px;
+          width: initial;
+          margin-right: 0px;
+      }
+  }
+  
+  .form-button {
+      width: 300px;
+      margin: 6px 16px 0px 16px;
+  }
+  
+  .form-action{
+      margin-top: 0px;
+      margin-left: 16px;
+      font-size: 0.9em;
+      font-style: italic;
+      font-weight: 600;
+  }
+  
+  // le agregamos un selector para que no se lo aplicque a los elementos de tipo form
+.ng-invalid:not(form).ng-touched {
+    background-color: red;
+}
+
+// cuando el campo sea valido y para cuando tenga el atribute required
+.ng-valid:not(form)[required] {
+    background: url("../../../assets/check.png");
+    // posicion a la derecha
+    background-position: right;
+    // que no se repita
+    background-repeat: no-repeat;
+}
+
+.error-message {
+    color:#E13526;
+    position: absolute;
+    padding-top: 8px;
+    font-size: 0.9em;
+    right: 0;
+}

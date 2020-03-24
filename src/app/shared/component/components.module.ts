@@ -4,38 +4,40 @@ import { ButtonComponent } from './button/button.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tab/tab.component';
 import { ContactComponent } from './contact/contact.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { HighlightDirective } from './highlight.directive';
 import { UpperCapitalPipe } from './upper-capital.pipe';
+import { StartsWithCapitalValidatorDirective } from './startsWithCapital.directive';
 
 @NgModule({
-    imports: [CommonModule ],
+    imports: [
+        CommonModule
+    ],
     declarations: [
         ButtonComponent,
         TabsComponent,
         TabComponent,
         ContactComponent,
-        ContactDetailComponent,
         ContactsListComponent,
         HighlightDirective,
-        UpperCapitalPipe
+        UpperCapitalPipe,
+        StartsWithCapitalValidatorDirective
     ],
     entryComponents: [
         ButtonComponent,
         TabsComponent,
         TabComponent,
         ContactComponent,
-        ContactDetailComponent,
-        ContactsListComponent
+        ContactsListComponent,
+        StartsWithCapitalValidatorDirective
     ],
     exports: [
         ButtonComponent,
         TabsComponent,
         TabComponent,
         ContactComponent,
-        ContactDetailComponent,
-        ContactsListComponent
+        ContactsListComponent,
+        StartsWithCapitalValidatorDirective
     ]
 })
 export class ComponentsModule { }
