@@ -5,9 +5,9 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tab/tab.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
-import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { HighlightDirective } from './highlight.directive';
 import { UpperCapitalPipe } from './upper-capital.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
     imports: [CommonModule ],
@@ -17,9 +17,9 @@ import { UpperCapitalPipe } from './upper-capital.pipe';
         TabComponent,
         ContactComponent,
         ContactDetailComponent,
-        ContactsListComponent,
         HighlightDirective,
-        UpperCapitalPipe
+        UpperCapitalPipe,
+        HeaderComponent
     ],
     entryComponents: [
         ButtonComponent,
@@ -27,15 +27,16 @@ import { UpperCapitalPipe } from './upper-capital.pipe';
         TabComponent,
         ContactComponent,
         ContactDetailComponent,
-        ContactsListComponent
+        HeaderComponent
     ],
     exports: [
         ButtonComponent,
         TabsComponent,
         TabComponent,
         ContactComponent,
+        HighlightDirective,
         ContactDetailComponent,
-        ContactsListComponent
+        HeaderComponent
     ]
 })
 export class ComponentsModule { }

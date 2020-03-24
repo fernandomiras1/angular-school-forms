@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactsService } from '../../services/contacts.service';
+import { ContactsService } from 'src/app/features/contacts-list/services/contacts.service';
 
 
 @Component({
