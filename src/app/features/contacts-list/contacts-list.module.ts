@@ -3,24 +3,32 @@ import { CommonModule } from '@angular/common';
 import { ComponentsModule } from 'src/app/shared/component/components.module';
 import { ContactsListComponent } from './container/contacts-list.component';
 
-// Paso 1
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
+import { PipesModule } from 'src/app/shared/pipes/pipes.module';
+import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 
 @NgModule({
     imports: [
         CommonModule,
         ComponentsModule,
-        FormsModule,
-        ReactiveFormsModule,
+        PipesModule,
+        DirectivesModule
     ],
     declarations: [
-        ContactsListComponent
+        ContactsListComponent,
+        ContactComponent,
+        ContactDetailComponent
     ],
     entryComponents: [
-        ContactsListComponent
+        ContactsListComponent,
+        ContactComponent,
+        ContactDetailComponent
     ],
     exports: [
-        ContactsListComponent
+        ContactsListComponent,
+        ContactComponent,
+        ContactDetailComponent
     ],
     providers: []
 })
