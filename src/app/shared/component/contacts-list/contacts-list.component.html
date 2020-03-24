@@ -1,0 +1,14 @@
+<h1 [class.sticky-header]="isStickyHeader">Contacts</h1>
+
+<div class="container">
+
+    <div class="contacts-list">
+        <app-contact *ngFor="let contact of contacts"
+            [appHighlight]="contactsService.selectedContact?.id == contact.id"
+            [contact]="contact" (clicked)="onContactSelected($event)">
+        </app-contact>
+    </div>
+
+    <app-contact-detail></app-contact-detail>
+
+</div>

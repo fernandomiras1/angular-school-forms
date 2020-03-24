@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    data: {title: 'Login'},
+    data: {title: 'Home'},
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
