@@ -1,0 +1,53 @@
+:host {
+    padding-bottom: 80px;
+    display: block;
+}
+.container {
+    height: 60px;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: gray;
+
+    &:hover{
+        color: gray;
+        border-bottom: 4px solid gray;
+        margin-bottom: -4px;
+    }
+
+    &.active-link{
+        color: black;
+        border-bottom: 4px solid black;
+        margin-bottom: -4px;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center; 
+}
+
+h1 {
+    margin-top: 4px;
+}
+
+.sticky-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 16px);
+    background:#e7e1ff;
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
