@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TitleService } from '../shared/services/title.service';
 
 @Component({
@@ -6,11 +6,6 @@ import { TitleService } from '../shared/services/title.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   constructor(public titleService: TitleService) { }
-
-  ngOnInit(): void {
-  }
-
 }
