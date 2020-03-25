@@ -3,7 +3,6 @@
   <!-- cancela la subcripcion del observable cuando el componente se cierra -->
   <h1>{{titleService.title$ | async}}</h1>
   <div class="buttons">
-    <a routerLink="/client" routerLinkActive="active-link">Client</a>
-    <a routerLink="/home" routerLinkActive="active-link">Home</a>
+    <ng-content></ng-content>
   </div>
 </div>
