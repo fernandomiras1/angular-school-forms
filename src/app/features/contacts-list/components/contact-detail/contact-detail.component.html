@@ -1,6 +1,9 @@
+<!-- si el selectedContact tiene dato. es decir que tiene un contacto para mostrar -->
+
+<!-- ng-container: usamos eso para que no lo renderize en el dom. como lo haria con un div -->
 <ng-container *ngIf="contactsService.selectedContact">
 
-  <app-contact 
+  <app-contact
     [contact]="contactsService.selectedContact"
     [appHighlight]="true"
     [color]="'#FEC1A6'"
