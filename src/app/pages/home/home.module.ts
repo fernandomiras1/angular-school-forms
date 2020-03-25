@@ -9,7 +9,8 @@ import { ContactsListModule } from 'src/app/features/contacts-list/contacts-list
 @NgModule({
     imports: [
         CommonModule,
-        ContactsListModule.forRoot(),
+        // importamos el modulo que vamos a necesitar en la home. Las listas de contacto
+        ContactsListModule,
         HomeRoutingModule,
         ComponentsModule
     ],
