@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, AfterViewChecked, HostListener } from '@angular/core';
-import { TitleService } from '../shared/services/title.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { TitleService } from 'src/app/shared/services/title.service';
+
 
 @Component({
   selector: 'app-header',

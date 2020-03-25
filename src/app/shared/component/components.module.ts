@@ -3,11 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tab/tab.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContactsListComponent } from './contacts-list/contacts-list.component';
-import { HighlightDirective } from './highlight.directive';
-import { UpperCapitalPipe } from './upper-capital.pipe';
-import { StartsWithCapitalValidatorDirective } from './startsWithCapital.directive';
+import { HighlightDirective } from '../directives/highlight.directive';
+import { UpperCapitalPipe } from '../pipes/upper-capital.pipe';
 
 @NgModule({
     imports: [
@@ -16,28 +13,17 @@ import { StartsWithCapitalValidatorDirective } from './startsWithCapital.directi
     declarations: [
         ButtonComponent,
         TabsComponent,
-        TabComponent,
-        ContactComponent,
-        ContactsListComponent,
-        HighlightDirective,
-        UpperCapitalPipe,
-        StartsWithCapitalValidatorDirective
+        TabComponent
     ],
     entryComponents: [
         ButtonComponent,
         TabsComponent,
-        TabComponent,
-        ContactComponent,
-        ContactsListComponent,
-        StartsWithCapitalValidatorDirective
+        TabComponent
     ],
     exports: [
         ButtonComponent,
         TabsComponent,
-        TabComponent,
-        ContactComponent,
-        ContactsListComponent,
-        StartsWithCapitalValidatorDirective
+        TabComponent
     ]
 })
 export class ComponentsModule { }

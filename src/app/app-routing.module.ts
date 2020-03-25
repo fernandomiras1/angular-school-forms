@@ -10,13 +10,13 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    data: {title: 'Home'},
+    data: {title: 'Contacts'},
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'contact-detail',
     data: {title: 'Contact detail'},
-    loadChildren: () => import('./pages/contact-detail/contact-detail.module').then(m => m.ClientDetailModule)
+    loadChildren: () => import('./features/contacts-list/components/contact-detail/contact-detail.module').then(m => m.ClientDetailModule)
   },
   {
     path: '',

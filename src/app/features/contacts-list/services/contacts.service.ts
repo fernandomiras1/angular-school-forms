@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Contact, PhoneType} from '../models/contact.model';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { Contact, PhoneType } from '../models/contact.model';
 
 @Injectable({
     providedIn: 'root'

@@ -16,12 +16,12 @@ export class Contact{
 // Clases: no solo definen la estructura, sino que pueden definir el contenido de las funciones. Y se pueden instanciar con un constructor.
 
 
-export interface ContactPhoneI{
+export interface ContactPhoneI {
     type:PhoneType;
     number:number;
 }
 
-export enum PhoneType{
+export enum PhoneType {
     mobile = 'mobile',
     home = 'home',
     work = 'work'

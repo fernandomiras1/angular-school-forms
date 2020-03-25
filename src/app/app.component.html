@@ -1,6 +1,10 @@
 <div class="container-fluid">
     <main>
-        <app-header></app-header>
-        <router-outlet></router-outlet>
+      <app-header>
+        <a routerLink="/client" routerLinkActive="active-link">Client</a>
+        <a routerLink="/home" routerLinkActive="active-link">Home</a>
+        <a routerLink="/contact-detail" routerLinkActive="active-link">contact-detail</a>
+      </app-header>
+      <router-outlet></router-outlet>
     </main>
 </div>

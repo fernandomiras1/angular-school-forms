@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Contact } from 'src/app/shared/models/contact.model';
-import { NgForm } from '@angular/forms';
-import { ContactsService } from 'src/app/shared/services/contacts.service';
 
+import { NgForm } from '@angular/forms';
+import { Contact } from 'src/app/features/contacts-list/models/contact.model';
+import { ContactsService } from 'src/app/features/contacts-list/services/contacts.service';
 
 @Component({
   selector: 'app-contact-detail',
@@ -15,7 +15,6 @@ export class ContactDetailComponent implements OnInit {
 public model: Contact = new Contact (0, '', 'assets/default-user.png', []);
 // no quiero modificar esta propiedad. Va almacenar todos los valores del enum PhoneTypes.
 @ViewChild('contactForm') contactForm: NgForm;
-
 
 constructor(private contactService: ContactsService) { }
 
@@ -40,6 +39,6 @@ addImage(event) {
   reader.onload = (evt) => {
     //  cuando se pase a base 64 la pasamos al model del objeto
     this.model.picture = String(reader.result);
-  }
+  };
 }
 }
