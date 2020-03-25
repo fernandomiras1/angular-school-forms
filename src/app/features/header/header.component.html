@@ -3,6 +3,17 @@
   <!-- cancela la subcripcion del observable cuando el componente se cierra -->
   <h1>{{titleService.title$ | async}}</h1>
   <div class="buttons">
-    <ng-content></ng-content>
+    <!-- selector para button -->
+    <ng-content select="button"></ng-content>
+    <!-- selector para clases -->
+    <ng-content select=".test"></ng-content>
+
+     <!-- le decimos que le vamos a
+      pasar todo lo que contenga el selecor header -->
+      <div style="color:red">
+        <ng-content select="[close]"></ng-content>
+      </div>
+
+      <ng-content></ng-content>
   </div>
 </div>
